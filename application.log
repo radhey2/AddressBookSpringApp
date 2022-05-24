@@ -1,0 +1,12 @@
+2022-05-24 22:38:16.791  INFO 5736 --- [restartedMain] c.e.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-UV1HNTI with PID 5736 (C:\Users\Radhey\IdeaProjects\AddressBookApp\target\classes started by Radhey in C:\Users\Radhey\IdeaProjects\AddressBookApp)
+2022-05-24 22:38:17.034 DEBUG 5736 --- [restartedMain] c.e.a.AddressBookAppApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-24 22:38:17.036  INFO 5736 --- [restartedMain] c.e.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-24 22:40:26.944  WARN 5736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-24 22:40:29.539  INFO 5736 --- [restartedMain] c.e.a.AddressBookAppApplication          : Started AddressBookAppApplication in 153.97 seconds (JVM running for 186.965)
+2022-05-24 22:40:29.553  INFO 5736 --- [restartedMain] c.e.a.AddressBookAppApplication          : AddressBook App has started
+2022-05-24 22:53:08.747  INFO 9256 --- [restartedMain] c.e.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-UV1HNTI with PID 9256 (C:\Users\Radhey\IdeaProjects\AddressBookApp\target\classes started by Radhey in C:\Users\Radhey\IdeaProjects\AddressBookApp)
+2022-05-24 22:53:08.774 DEBUG 9256 --- [restartedMain] c.e.a.AddressBookAppApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-24 22:53:08.775  INFO 9256 --- [restartedMain] c.e.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-24 22:53:58.496  WARN 9256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-24 22:54:03.209  INFO 9256 --- [restartedMain] c.e.a.AddressBookAppApplication          : Started AddressBookAppApplication in 58.901 seconds (JVM running for 72.741)
+2022-05-24 22:54:03.221  INFO 9256 --- [restartedMain] c.e.a.AddressBookAppApplication          : AddressBook App started in COMMON Environment
