@@ -2,35 +2,31 @@ package com.example.addressbookapp.dto;
 
 import com.example.addressbookapp.modal.AddressBookData;
 
+import java.util.List;
+
 public class ResponseDTO {
-    public ResponseDTO(String get_call_success, AddressBookData adData) {
+    public String message;
+    public Object data;
+
+    public ResponseDTO(String message,Object data) {
+        this.message = message;
+        this.data = data;
+
     }
 
-    public ResponseDTO(String deleted_succesFully, int i) {
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public String firstname;
-    public String lastname;
-
-    public ResponseDTO(String firstname,String lastname){
-
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public Object getData() {
+        return data;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public void setData(Object data) {
+        this.data = data;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public String getMessage() {
+        return message;
     }
 }

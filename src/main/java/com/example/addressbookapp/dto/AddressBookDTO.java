@@ -3,13 +3,10 @@ package com.example.addressbookapp.dto;
 public class AddressBookDTO {
     public String firstname;
     public String lastname;
-
-    public AddressBookDTO(String firstname,String lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-
-    }
-
+public AddressBookDTO(String firstname,String lastname){
+    this.firstname = firstname;
+    this.lastname = lastname;
+}
     public String getFirstname() {
         return firstname;
     }
@@ -18,11 +15,11 @@ public class AddressBookDTO {
         this.firstname = firstname;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    public String getLastname() {
+        return lastname;
     }
 }

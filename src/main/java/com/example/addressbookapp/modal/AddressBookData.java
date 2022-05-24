@@ -4,19 +4,24 @@ import com.example.addressbookapp.dto.AddressBookDTO;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 
 public class AddressBookData {
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue
+  //  @Column(name = "AddressId")
     private Long id;
 
     private String firstname;
     private String lastname;
 
-    public AddressBookData(int i, AddressBookDTO addressBookDTO) {
+    public AddressBookData(long id, AddressBookDTO addressBookDTO) {
+        this.id = id;
+        this.firstname = addressBookDTO.firstname;
+        this.lastname = addressBookDTO.lastname;
     }
 
     public Long getId() {
