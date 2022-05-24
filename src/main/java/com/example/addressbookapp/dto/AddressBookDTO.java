@@ -1,25 +1,21 @@
 package com.example.addressbookapp.dto;
 
+import javax.validation.constraints.NotEmpty;
+
 public class AddressBookDTO {
+
+    @NotEmpty(message = "firstname Should not be Empty")
     public String firstname;
+
+    @NotEmpty(message = "lastname should not be Empty")
     public String lastname;
 public AddressBookDTO(String firstname,String lastname){
     this.firstname = firstname;
     this.lastname = lastname;
 }
-    public String getFirstname() {
-        return firstname;
-    }
+   @Override
+    public String toString(){
+    return "firstname"+firstname+":lastname="+lastname;
+   }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
 }
