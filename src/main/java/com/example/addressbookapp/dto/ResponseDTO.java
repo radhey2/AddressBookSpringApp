@@ -1,9 +1,6 @@
 package com.example.addressbookapp.dto;
 
-import com.example.addressbookapp.modal.AddressBookData;
 import lombok.Data;
-
-import java.util.List;
 
 public @Data class ResponseDTO {
     private String message;
