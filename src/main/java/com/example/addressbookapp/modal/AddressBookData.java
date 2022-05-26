@@ -1,40 +1,48 @@
 package com.example.addressbookapp.modal;
 
 import com.example.addressbookapp.dto.AddressBookDTO;
+import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-
-public class AddressBookData {
+@Table(name = "address_book_data")
+public @Data class AddressBookData {
     @Id
-    @GeneratedValue
-  //  @Column(name = "AddressId")
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Contact_id")
+    private int id;
 
+   @Column(name = "Firstname")
     private String firstname;
     private String lastname;
+    private String city;
+    private String Email;
+    private String Address;
+    private long phoneNo;
+    private String state;
 
-    public AddressBookData(long id, AddressBookDTO addressBookDTO) {
-        this.id = id;
+    private long zipcode;
+
+    public AddressBookData() {
+
+    }
+
+
+
+    public void updateAddressBookData(AddressBookDTO addressBookDTO) {
         this.firstname = addressBookDTO.firstname;
         this.lastname = addressBookDTO.lastname;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+        this.city = addressBookDTO.city;
+        this.Address = addressBookDTO.Address;
+        this.Email = addressBookDTO.Email;
+        this.state = addressBookDTO.state;
+        this.phoneNo = addressBookDTO.phoneNo;
+        this.zipcode = addressBookDTO.zipcode;
     }
 
     public AddressBookData(AddressBookDTO addressBookDTO) {
-        this.firstname = addressBookDTO.firstname;
-        this.lastname = addressBookDTO.lastname;
+        this.updateAddressBookData(addressBookDTO);
     }
 
     public String getFirstname() {
@@ -53,7 +61,5 @@ public class AddressBookData {
         this.lastname = lastname;
     }
 
-    public AddressBookData(){
 
-    }
 }
