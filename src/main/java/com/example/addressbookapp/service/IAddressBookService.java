@@ -4,8 +4,10 @@ import com.example.addressbookapp.Repository.AddressBookRepository;
 import com.example.addressbookapp.dto.AddressBookDTO;
 import com.example.addressbookapp.modal.AddressBookData;
 
+import java.util.List;
+
 public interface IAddressBookService {
-    AddressBookRepository getAddressBookData();
+    List<AddressBookData> getAddressBookData();
 
     AddressBookData getAddressBookDataById(int Id);
 

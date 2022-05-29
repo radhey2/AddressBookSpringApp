@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 public class AddressBookService implements IAddressBookService{
@@ -16,9 +18,9 @@ public class AddressBookService implements IAddressBookService{
     private AddressBookRepository addresssBookRepository;
 
     @Override
-    public AddressBookRepository getAddressBookData(){
+    public List<AddressBookData> getAddressBookData(){
 
-        return addresssBookRepository;
+        return  addresssBookRepository.findAll();
     }
 
     @Override

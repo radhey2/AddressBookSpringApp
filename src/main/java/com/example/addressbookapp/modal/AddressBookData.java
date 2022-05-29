@@ -19,7 +19,7 @@ public @Data class AddressBookData {
     private String city;
     private String Email;
     private String Address;
-    private long phoneNo;
+    private String phoneNo;
     private String state;
 
     private long zipcode;
@@ -27,9 +27,6 @@ public @Data class AddressBookData {
     public AddressBookData() {
 
     }
-
-
-
     public void updateAddressBookData(AddressBookDTO addressBookDTO) {
         this.firstname = addressBookDTO.firstname;
         this.lastname = addressBookDTO.lastname;

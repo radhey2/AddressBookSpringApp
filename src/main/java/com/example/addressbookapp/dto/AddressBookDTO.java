@@ -4,6 +4,7 @@ import lombok.ToString;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 public @ToString class AddressBookDTO {
 
@@ -20,16 +21,16 @@ public @ToString class AddressBookDTO {
     public String Email;
     @NotEmpty(message = "Address Should not be Empty")
     public String Address;
-   // @Pattern(regexp = "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$")
+    @Pattern(regexp = "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$")
     @NotNull(message = "phoneNo Should not be Empty")
-    public long phoneNo;
+    public String phoneNo;
     @NotEmpty(message = "state Should not be Empty")
     public String state;
 
     @NotNull(message = "Zipcode Should Not be Empty")
     public long zipcode;
 public AddressBookDTO(String firstname,String lastname,String city,
-                      String address,String email,String state,long phoneNo,long zipcode){
+                      String address,String email,String state,String phoneNo,long zipcode){
     this.firstname = firstname;
     this.lastname = lastname;
     this.city = city;
