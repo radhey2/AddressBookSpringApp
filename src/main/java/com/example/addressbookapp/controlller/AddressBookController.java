@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin(allowedHeaders = "*", origins = "*")
 @RestController
 @RequestMapping("/AddressBook")
 public class AddressBookController {
 
     @Autowired
     private IAddressBookService addressBookService;
-    @RequestMapping(value = {"","/","/home"})
+    @GetMapping("/get")
     public ResponseEntity<ResponseDTO> getAddressBookData(){
         List<AddressBookData> addressBookData = null;
         addressBookData = addressBookService.getAddressBookData();
