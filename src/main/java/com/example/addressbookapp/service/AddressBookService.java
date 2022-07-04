@@ -29,6 +29,16 @@ public class AddressBookService implements IAddressBookService{
     }
 
     @Override
+    public List<AddressBookData> sortAddressBookByCity() {
+        return addresssBookRepository.sortByCity();
+    }
+
+    @Override
+    public List<AddressBookData> sortAddressBookByState() {
+        return addresssBookRepository.sortByState();
+    }
+
+    @Override
     public AddressBookData createAddressBookData(AddressBookDTO addressBookDTO) {
         AddressBookData addressBookData = null;
         addressBookData = new AddressBookData(addressBookDTO);

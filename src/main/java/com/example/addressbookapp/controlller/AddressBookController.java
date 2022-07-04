@@ -36,6 +36,22 @@ public class AddressBookController {
         return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
     }
 
+    @GetMapping("/get/sortbycity")
+    public ResponseEntity<ResponseDTO> sortByCity() {
+        List<AddressBookData> addressBookList = null ;
+        addressBookList = addressBookService.sortAddressBookByCity();
+        ResponseDTO responseDTO = new ResponseDTO("Sort by city call is successful! ", addressBookList);
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+    }
+    //   To get state in ascending order
+    @GetMapping("/get/sortbystate")
+    public ResponseEntity<ResponseDTO> sortByState() {
+        List<AddressBookData> addressBookList = null;
+        addressBookList = addressBookService.sortAddressBookByState();
+        ResponseDTO responseDTO = new ResponseDTO("Sort by state call is successful! ", addressBookList);
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+    }
+
     @PostMapping("/create")
     public ResponseEntity<ResponseDTO>addAddressBookData(@Valid @RequestBody AddressBookDTO addressBookDTO){
         AddressBookData addressBookData = null;
